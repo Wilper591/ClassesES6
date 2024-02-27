@@ -19,25 +19,29 @@ var Impuestos = exports.Impuestos = /*#__PURE__*/function () {
     this._deducciones = deducciones;
   }
   _createClass(Impuestos, [{
-    key: "montoBrutoAnual",
-    get: function get() {
+    key: "getMontoBrutoAnual",
+    value: function getMontoBrutoAnual() {
       if (typeof this._montoBrutoAnual === 'number') {
         return this._montoBrutoAnual;
       }
-    },
-    set: function set(nuevo_montoBrutoAnual) {
+    }
+  }, {
+    key: "setMontoBrutoAnual",
+    value: function setMontoBrutoAnual(nuevo_montoBrutoAnual) {
       if (typeof nuevo_montoBrutoAnual === 'number') {
         this._montoBrutoAnual = nuevo_montoBrutoAnual;
       }
     }
   }, {
-    key: "deducciones",
-    get: function get() {
+    key: "getDeducciones",
+    value: function getDeducciones() {
       if (typeof this._deducciones === 'number') {
         return this._deducciones;
       }
-    },
-    set: function set(nueva_deducciones) {
+    }
+  }, {
+    key: "setDeducciones",
+    value: function setDeducciones(nueva_deducciones) {
       if (typeof nueva_deducciones === 'number') {
         this._deducciones = nueva_deducciones;
       }

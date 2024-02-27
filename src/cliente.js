@@ -4,13 +4,13 @@ export class Cliente {
         this._impuesto = impuesto;
     }
 
-    get nombre() {
+    getNombre() {
         if(typeof this._nombre === 'string') {
             return this._nombre;
         }
     }
 
-    set nombre(nuevo_nombre) {
+    setNombre(nuevo_nombre) {
         if(typeof nuevo_nombre === 'string') {
             this._nombre = nuevo_nombre;
         }
@@ -18,14 +18,15 @@ export class Cliente {
 
     calcularImpuesto() {
       // Acceder a las propiedades del objeto impuesto
-      const montoBrutoAnual = this._impuesto.montoBrutoAnual;
-      const deducciones = this._impuesto.deducciones;
+      const montoBrutoAnual = this._impuesto._montoBrutoAnual;
+      const deducciones = this._impuesto._deducciones;
 
       // Calcular el impuesto
       const impuestoCalculado = (montoBrutoAnual - deducciones) * 0.21;
 
       // Devolver el impuesto calculado
-      return impuestoCalculado;
+      return console.log(impuestoCalculado);
+      
     }
 
 }

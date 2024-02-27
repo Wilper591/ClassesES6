@@ -4,25 +4,25 @@ export class Impuestos {
         this._deducciones = deducciones;
     }
 
-    get montoBrutoAnual() {
+    getMontoBrutoAnual() {
         if(typeof this._montoBrutoAnual === 'number'){
             return this._montoBrutoAnual;
         }
     }
 
-    set montoBrutoAnual(nuevo_montoBrutoAnual) {
+    setMontoBrutoAnual(nuevo_montoBrutoAnual) {
         if (typeof nuevo_montoBrutoAnual === 'number') {
           this._montoBrutoAnual = nuevo_montoBrutoAnual;
         }
     }
 
-    get deducciones() {
+    getDeducciones() {
         if(typeof this._deducciones === 'number') {
             return this._deducciones;
         }
     }
 
-    set deducciones(nueva_deducciones) {
+    setDeducciones(nueva_deducciones) {
         if (typeof nueva_deducciones === 'number') {
           this._deducciones = nueva_deducciones;
         }

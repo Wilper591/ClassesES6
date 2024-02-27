@@ -2,14 +2,15 @@
 
 var _impuestos = require("./impuestos.js");
 var _cliente = require("./cliente.js");
-var impuestos = new _impuestos.Impuestos(10000, 900);
-var clienteNuevo = new _cliente.Cliente("Jorge", impuestos);
+var impuestosCliente = new _impuestos.Impuestos(10000, 900);
+var clienteNuevo = new _cliente.Cliente("Jorge", impuestosCliente);
+console.log(impuestosCliente);
 console.log(clienteNuevo);
-console.log(impuestos);
 clienteNuevo.calcularImpuesto();
-console.log(clienteNuevo.calcularImpuesto());
-impuestos.montoBrutoAnual = 20000;
-impuestos.deducciones = 3500;
-console.log(clienteNuevo.calcularImpuesto());
-clienteNuevo.nombre = "Alberto";
-console.log(clienteNuevo);
+impuestosCliente.setMontoBrutoAnual(30000);
+impuestosCliente.setDeducciones(2000);
+console.log(impuestosCliente);
+clienteNuevo.calcularImpuesto();
+console.log(clienteNuevo.getNombre());
+clienteNuevo.setNombre("Alberto");
+console.log(clienteNuevo.getNombre());

@@ -19,13 +19,15 @@ var Cliente = exports.Cliente = /*#__PURE__*/function () {
     this._impuesto = impuesto;
   }
   _createClass(Cliente, [{
-    key: "nombre",
-    get: function get() {
+    key: "getNombre",
+    value: function getNombre() {
       if (typeof this._nombre === 'string') {
         return this._nombre;
       }
-    },
-    set: function set(nuevo_nombre) {
+    }
+  }, {
+    key: "setNombre",
+    value: function setNombre(nuevo_nombre) {
       if (typeof nuevo_nombre === 'string') {
         this._nombre = nuevo_nombre;
       }
@@ -34,14 +36,14 @@ var Cliente = exports.Cliente = /*#__PURE__*/function () {
     key: "calcularImpuesto",
     value: function calcularImpuesto() {
       // Acceder a las propiedades del objeto impuesto
-      var montoBrutoAnual = this._impuesto.montoBrutoAnual;
-      var deducciones = this._impuesto.deducciones;
+      var montoBrutoAnual = this._impuesto._montoBrutoAnual;
+      var deducciones = this._impuesto._deducciones;
 
       // Calcular el impuesto
       var impuestoCalculado = (montoBrutoAnual - deducciones) * 0.21;
 
       // Devolver el impuesto calculado
-      return impuestoCalculado;
+      return console.log(impuestoCalculado);
     }
   }]);
   return Cliente;
